@@ -20,4 +20,4 @@ let MessageSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('massege', MessageSchema);
+module.exports = mongoose.model('message', MessageSchema);

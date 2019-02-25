@@ -8,8 +8,8 @@ let Chat = require('./models/Chat');
 let Message = require('./models/Message');
 
 
-
 mongoose.connect('mongodb://localhost:27017/chat', {useNewUrlParser: true});
+
 let app = express();
 let server = http.createServer(app);
 let io = require('socket.io')(server);
@@ -34,7 +34,7 @@ io.use(function (socket, next) {
 
 io.on('connect', async function (socket) {
     let principal = socket.request.session.principal ? socket.request.session.principal : {name: 'anonim'};
-    let chat = socket.request.session.chat ? socket.request.session.chat : await Chat.findOne({_id: '5be9d2721f3fc3412427ad7f'});
+    let chat = socket.request.session.chat ? socket.request.session.chat : await Chat.findOne({_name: 'default'});
     socket.join(chat._id);
 
     io.to(socket.id).emit('init', await Message.find({chat: chat._id}));
