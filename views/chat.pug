@@ -1,0 +1,13 @@
+extends templates/layout
+block content
+    h2(class="header")=chat.name
+    p(class="name")=principal.name
+    .chat
+        .messages#messages
+
+
+    .form
+        input(type='text' class='message-input' id='message-input')
+        button(class='message-button' id='message-btn') Send
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js')
+    script(src='/js/main.js')

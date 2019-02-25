@@ -1,0 +1,7 @@
+extends templates/layout
+block content
+    .form_index
+        h2 Enter your nickname!!
+        form(action='/login', method='post')
+            input(type='text' name='name')
+            input(type='submit' value='Login')

@@ -1,0 +1,12 @@
+extends ./templates/layout
+block content
+    .create_chat
+        h2=principal.name + ", Create chat:"
+        form(action='/create-chat', method='post')
+            input(type='text' name='name' required)
+            input(type='submit' value='Create')
+        h2 Select chat:
+        ul
+            each chat in chats
+                li
+                    a(href='/chat/' + chat._id)=chat.name

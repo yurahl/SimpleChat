@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: cornflowerblue;
+    margin-bottom: 70px;
+    margin-top: 45px;
+}
+.form_index{
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+}
+.name{
+    width: 0;
+    height: 0;
+    display: none;
+}
+.form_index>form>input:first-child{
+    height: 30px;
+}
+.form_index>form>input:last-child{
+    height: 30px;
+    width: 60px;
+    background-color: lightsteelblue;
+    cursor: pointer;
+}
+.create_chat{
+    margin: -30px 0 0 15px;
+}
+.create_chat li{
+    list-style: none;
+}
+.create_chat a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+}
+.create_chat a:hover{
+    color: blue;
+}
+.create_chat>form, .create_chat>h2:first-child{
+    text-align: center;
+}
+.create_chat>form>input:first-child{
+    height: 30px;
+}
+.create_chat>form>input:last-child{
+    height: 30px;
+    width: 60px;
+    background-color: lightsteelblue;
+    cursor: pointer;
+}
+
+.header{
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: lightsteelblue;
+    z-index: 1;
+}
+.messages{
+    width: 90%;
+    margin: 0px auto;
+}
+.message_my{
+    background-color: aliceblue;
+    margin: 10px 10px 10px 60%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    max-width: 400px;
+}
+.message_my>p{
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+.message_my>span:first-child{
+    font-weight: bold;
+}
+.message_my>span:last-child{
+   float: right;
+    font-size: 14px;
+}
+.message_other {
+    background-color: aqua;
+    margin: 10px 60% 10px 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.message_other>p{
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+.message_other>span:first-child{
+    font-weight: bold;
+}
+.message_other>span:last-child{
+    float: right;
+    font-size: 14px;
+
+
+
+}
+.form{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 40px
+}
+
+.message-input {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 85%;
+    border: none;
+    padding: 0px 15px;
+    font-size: 14px;
+}
+.message-button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    min-width: 15%;
+    border: none;
+    background-color: lightsteelblue;
+    cursor: pointer;
+}
+.clearfix {
+    overflow: auto;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
